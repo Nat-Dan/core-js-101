@@ -36,13 +36,11 @@ function findElement(arr, value) {
  *    2 => [ 1, 3 ]
  *    5 => [ 1, 3, 5, 7, 9 ]
  */
-function generateOdds(/* len */) {
-  // const arr = new Array(len);
-  // for (let i = 0; i < len; i++, start++) {
-  //   arr[i] = start;
-  // }
-  // return arr;
-  throw new Error('Not implemented');
+function generateOdds(len) {
+  const arr = Array.from({ length: len * 2 }, (_, i) => i + 1);
+  const odds = arr.filter((number) => number % 2 !== 0);
+  return odds;
+  // throw new Error('Not implemented');
 }
 
 
@@ -58,8 +56,10 @@ function generateOdds(/* len */) {
  *    [0, 1, 2, 3, 4, 5] => [0, 1, 2, 3, 4, 5,   0, 1, 2, 3, 4, 5]
  *    [] => []
  */
-function doubleArray(/* arr */) {
-  throw new Error('Not implemented');
+function doubleArray(arr) {
+  const arr2 = arr;
+  return arr2.concat(arr);
+  // throw new Error('Not implemented');
 }
 
 
@@ -74,8 +74,9 @@ function doubleArray(/* arr */) {
  *    [-1, 2, -5, -4, 0] => [ 2 ]
  *    [] => []
  */
-function getArrayOfPositives(/* arr */) {
-  throw new Error('Not implemented');
+function getArrayOfPositives(arr) {
+  return arr.filter((x) => x > 0);
+  // throw new Error('Not implemented');
 }
 
 /**
@@ -89,8 +90,9 @@ function getArrayOfPositives(/* arr */) {
  *    [ 1, 2, 3, 4, 5 ] => []
  *    [ 'cat, 'dog', 'raccoon' ] => [ 'cat', 'dog', 'raccoon' ]
  */
-function getArrayOfStrings(/* arr */) {
-  throw new Error('Not implemented');
+function getArrayOfStrings(arr) {
+  return arr.filter((x) => typeof x === 'string');
+  // throw new Error('Not implemented');
 }
 
 /**
